@@ -17,3 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/login','LoginController@Test');
+Route::any('/input','LoginController@Test1');
