@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use  App\Model\User;
+use App\Model\User;
 // use Illuminate\Support\Facades\Request;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Request as FacadesRequest;
@@ -34,11 +34,19 @@ class LoginController extends Controller
                 $data = $request->all();
                 // echo $path;
                 $data['avatar'] = './uploads/' . $path;
-                $result=User::create($data);
+                $result = User::create($data);
                 dd($result);
             }
         } else {
             return view('welcome');
         }
+    }
+    public function Test2()
+    {
+        header('Access-Control-Allow-Origin:*'); //信任所有域名
+        $User = new User();
+        $result = $User->all();
+        // dd($result);
+        return $result;
     }
 }
