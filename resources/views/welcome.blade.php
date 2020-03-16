@@ -13,10 +13,17 @@
                 height: 100vh;
                 margin: 0;
                 text-align: center;
+                position:relative;
+
             }
             .title {
+                width:100%;
                 font-size: 84px;
-                margin-top:40%;
+                position:absolute;
+                top:50%;
+                transform:translateY(-50%);
+                /* margin-top:40%; */
+
             }
 
             </style>
