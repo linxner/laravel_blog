@@ -18,4 +18,5 @@ Route::get('/', function () {
 });
 Route::get('/login', 'LoginController@Test');
 Route::any('/input', 'LoginController@Test1');
-Route::any('test', 'LoginController@Test2');
+Route::any('/test', 'LoginController@Test2');
+// RouteServiceProvider
